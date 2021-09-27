@@ -120,16 +120,16 @@ havendo alguma dessas situações, lança violações como exemplo de json de sa
 
 Para fazer os testes de saída, precisa apenas mudar o dado do arquivo de entrada. Exemplo, quero verificar se vai ser lançado a violação de **insufficient-limit**, portanto, posso testar colocando um json de entrada com limit de 0 R$ ou limite menor do que o valor do campo Amout das transações realizadas.
 
-````json
+````jsonc
 {
    "account":{
       "flow-process":"authorizer",
       "active-card":true,
-      "available-limit":0,   // Ou Coloca Zero, ou qualquer valor que seja menor do que o amout de alguma transação.
+      "available-limit":0,   /* Ou Coloca Zero, ou qualquer valor que seja menor do que o amout de alguma transação.*/
       "transaction":[
          {
             "merchant":"Burger King",
-            "amount":20,    // /Por exemplo, aqui é 20R$, um limite entre 0-20, irá lançar a violação de insufficientlimit.
+            "amount":20,    /* Por exemplo, aqui é 20R$, um limite entre 0-20, irá lançar a violação de insufficientlimit. */
             "time":"2019-02-13T11:01:00.000Z"
          },
          {
