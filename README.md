@@ -1,6 +1,6 @@
-### Authorizer/Creation application
+###  application about process of authorization
 
-#### name project:  **authorizer-cllg**.
+#### name project:  **Auth-Process**.
 
 
 
